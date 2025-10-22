@@ -1,0 +1,15 @@
+<?php
+
+$url = "https://jsonplaceholder.typicode.com/users";
+
+$response = file_get_contents($url);
+
+$users = json_decode($response, true);
+
+foreach($users as $user){
+
+    echo $user["name"] . " - " . $user["email"] . "<br>";
+}
+
+
+?>
